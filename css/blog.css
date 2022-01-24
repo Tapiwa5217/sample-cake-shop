@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body h1 span {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+body h2 {
+  color: #DB5375;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+body #blogs-container {
+  padding: 30px 10%;
+}
+
+body #blogs-container .blog-box img {
+  width: 100%;
+  height: 150px;
+}
+
+body #blogs-container .blog-box .blog-info h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #DB5375;
+}
+
+body #blogs-container .blog-box .blog-info p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  color: #777;
+}
+
+body #blogs-container .blog-box .blog-info a {
+  color: #DB5375;
+  border: 2px solid #DB5375;
+  background-color: transparent;
+  padding: 15px 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px 0;
+  text-align: right;
+  transition: .5s ease;
+}
+
+body #blogs-container .blog-box .blog-info a:hover {
+  background-color: #de607f;
+  color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  body #blogs-container {
+    padding: 30px 20%;
+  }
+  body #blogs-container .blog-box img {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body #blogs-container {
+    padding: 30px 25%;
+  }
+  body #blogs-container .blog-box img {
+    height: 350px;
+  }
+}

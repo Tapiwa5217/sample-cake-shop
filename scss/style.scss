@@ -1,0 +1,596 @@
+@import 'utilities';
+@import 'generals';
+@import 'blog';
+@import 'article';
+@import 'contact';
+@import 'catalog';
+
+body {
+
+    header {
+        background-color: $secondary-color;
+        @include flex(row,space-between,center);
+        padding: 20px;
+        position: relative;
+
+        #header-logo-section {
+
+            a {
+
+                img {
+                    width: 150px;
+                }
+            }
+        }
+
+        #nav-section {
+            
+            button {
+                padding: 5px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                
+
+                i {
+                    font-size: 25px;
+                    color: $brand-color;
+                }
+            }
+
+            #header-nav {
+                position: absolute;
+                left: 0;
+                top: 86.8px;
+                background-color: $primary-color;
+                width: 100vw;
+                height: 0;
+                overflow: hidden;
+                transition: 1s ease-out;
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+
+                    li {
+                       // margin: 30px 0;
+                        padding: 20px 30px;
+                        border-top: 1px solid $secondary-color;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            transition: 1s ease;
+
+                            &:hover {
+                                color: $brand-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hero-section {
+        background-color: $secondary-color;
+        padding: 50px 0;
+
+        #hero-text {
+            padding: 0 20px;
+
+            h1 {
+                font-size: 2.5rem;
+                color: darken($primary-color, 4);
+                text-shadow: 0 0 1px $light-text;
+
+                span {
+                    display: block;
+                    font-size: 3rem;
+                    color: $brand-color;
+                }
+            }
+
+            h2 {
+                color: $light-text;
+                font-weight: 300;
+                font-size: 1rem;
+                margin: 10px 0;
+                font-family: 'Poppins', sans-serif;
+                text-transform: unset;
+            }
+
+            a {
+                display: inline-block;
+                @extend %cta-btn;
+                margin-top: 10px;
+            }
+        }
+
+        #hero-image {
+            display: none;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    #about-us-section {
+        padding: 20px;
+
+        h2 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #about-us-content {
+
+            @include flex(column,center,center);
+
+            #about-us-image {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            #about-us-text {
+                margin: 20px 0;
+                p {
+                    color: $light-text;
+                }
+            }
+        }
+    }
+
+    #services-section {
+        background-color: $secondary-color;
+        margin: 30px 0;
+
+        h2 {
+            text-align: center;
+            padding: 40px 0 40px 0;
+        }
+
+        #services-boxes {
+            padding: 0 20px 50px 20px;
+
+        .services-box {
+            text-align: center;
+            margin-bottom: 50px;
+
+            img {
+                width: 100%;
+                border: 6px solid $primary-color;
+            }
+
+            h3 {
+                color: $dark-text;
+                margin: 10px 0;
+            }
+
+            p {
+                color: $light-text;
+            }
+        }
+    }
+
+        #services-cta {
+            @include flex(column,center,center);
+            background-color: $primary-color;
+            padding: 20px;
+
+            p {
+                color: $light-text;
+                font-weight: 500;
+            }
+
+            a {
+                display: inline-block;
+                @extend %cta-btn;
+                margin-top: 10px;
+            }
+    }
+    }
+
+    #customer-reviews {
+        margin: 50px 0;
+
+        h2 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .review-box {
+            padding: 20px;
+
+            &:nth-of-type(2) {
+                background-color: $secondary-color;
+                margin-right: 20px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            blockquote {
+
+                q {
+                    color: $light-text;
+                }
+            }
+
+            .customer-info {
+                @include flex(row,flex-start,center);
+
+                img {
+                    width: 60px;
+                    border-radius: 50%;
+                }
+
+                .customer-info-text {
+                    margin: 20px 0;
+                    margin-left: 10px;
+
+                    h4 {
+                        font-size: 1rem;
+                        color: $dark-text;
+                    }
+
+                    p {
+                        font-size: .8rem;
+                        color: $light-texter;
+                    }
+                }
+            }
+        }
+    }
+
+    #our-advantages {
+        background-color: $secondary-color;
+        padding: 20px;
+
+        h2 {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        #advantages-content {
+
+            #advantages-image {
+                display: none;
+            }
+
+            #advantages-text {
+
+                color: $light-texter;
+
+                ul {
+                    color: $light-text;
+                    list-style-type: none;
+                    margin: 20px 0;
+
+                    li {
+                        padding: 10px 0;
+                        @include flex(row,flex-start,center);
+
+                        i {
+                            font-size: 1.5rem;
+                            color: $brand-color;
+                        }
+
+                        span {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        @include flex(column,center,center);
+        background-color: $secondary-color;
+        padding: 50px 20px; 
+
+        #footer-logo {
+
+            img {
+                width: 60px;
+            }
+        }
+
+        #footer-nav {
+            margin: 20px 0;
+
+            ul {
+                text-align: center;
+                list-style-type: none;
+
+                li {
+                    margin: 10px 0;
+
+                    a {
+                        text-decoration: none;
+                        color: $light-texter;
+                        transition: 1s ease;
+
+                        &:hover {
+                            color: $dark-text;
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer-socials {
+
+            a {
+                display: inline-block;
+                margin: 0 10px;
+                color: $brand-color;
+
+                &:hover {
+
+                    i {
+                        transform: translateY(-5px);
+                        transition: .5s ease;
+                    }
+                }
+                
+                i {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@include tabletScreens {
+
+    body {
+    
+        #hero-section {
+            background-color: $secondary-color;
+            padding: 50px 0;
+    
+            #hero-text {
+                text-align: center;
+        }
+
+        #hero-image {
+            @include flex(row,center,center);
+            margin: 20px 0;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+    
+        #about-us-section {
+            padding: 50px;
+    
+            h2 {
+                margin: 20px 0;
+            }
+    
+            #about-us-content {
+                @include flex(row,flex-start,center);
+                padding: 20px 0;
+    
+                #about-us-image {
+                    @include flex(row,center,center);
+                    margin-right: 20px;
+
+                    img {
+                        width: 95%;
+                    }
+                }
+    
+                #about-us-text {
+                    width: 60%;
+                    margin: 0;
+                }
+            }
+        }
+    
+        #services-section {
+    
+          
+    
+            #services-boxes {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(3,1fr);
+        }
+    
+            #services-cta {
+                @include flex(row,center,center);
+                padding: 30px 0;
+    
+                p {
+                    margin-right: 20px;
+                }
+    
+                a {
+                    margin-top: 0;
+                }
+        }
+        }
+    
+        #our-advantages {
+            padding: 20px;
+    
+            #advantages-content {
+                @include flex(row,center,center);
+                padding: 20px 0;
+    
+                #advantages-image {
+                    display: block;
+                    @include flex(row,center,center);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                #advantages-text {
+                    width: 80%; 
+
+                    ul {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    
+        footer {
+            @include flex(row,space-around,center);
+        }
+    }
+}
+
+@include desktopScreens {
+
+    body {
+
+        header {
+    
+            #nav-section {
+
+                #hamburger-menu {
+                    display: none;
+                }
+    
+                #header-nav {
+                    position: static;
+                    background-color: transparent;
+                    width: initial;
+                    height: initial;
+                    overflow: unset;
+                    transition: unset;
+    
+                    ul {
+    
+                        li {
+                           display: inline-block;
+                            padding: 20px;
+                            border-top: unset;
+    
+                            a {
+                                color: $light-texter;
+                                text-decoration: none;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        #hero-section {
+            @include flex(row,center,center);
+    
+            #hero-text {
+                text-align: left;
+                width: 50%;
+            }
+
+            #hero-image {
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    
+        #about-us-section {
+            padding: 50px;
+    
+            h2 {
+                margin: 20px 0;
+                font-size: 2.5rem;
+            }
+    
+            #about-us-content {
+    
+                #about-us-image {
+
+                    img {
+                        width: 95%;
+                    }
+                }
+    
+                #about-us-text {
+                    width: 60%;
+                    margin: 0;
+                }
+            }
+        }
+    
+        #services-section {
+            padding: 0;
+            padding-top: 30px;
+    
+            h2 {
+                padding: 50px 0 50px 0;
+                font-size: 2.5rem;
+            }
+    
+            #services-boxes {
+                grid-gap: 30px;
+        }
+    
+            #services-cta {
+    
+                p {
+                    font-size: 1.1rem;
+                }
+    
+        }
+        }
+    
+        #customer-reviews {
+            margin: 50px 0;
+    
+            h2 {
+                font-size: 2.5rem;
+                padding: 50px 0;
+            }
+    
+            #review-boxes {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 20px;
+                padding: 0 10px;
+            .review-box {
+    
+                &:nth-of-type(2) {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+        }
+    
+        #our-advantages {
+            padding: 20px;
+
+            h2 {
+                font-size: 2.5rem;
+                padding: 50px 0 0 0;
+            }
+    
+         
+            
+        }
+    
+        footer {
+            @include flex(row,space-around,center);
+        }
+    }
+    
+}

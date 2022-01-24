@@ -1,0 +1,66 @@
+@import 'utilities';
+@import 'generals';
+
+body {
+
+    #catalog-section {
+        padding: 50px 0;
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: $brand-color;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #catalog-boxes {
+            padding: 0 20px;
+
+            .catalog-box {
+                margin: 50px 0;
+
+                img {
+                    width: 100%;
+                }
+
+                h2 {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@include tabletScreens {
+
+    body {
+
+        #catalog-section {
+    
+            #catalog-boxes {
+                padding: 0 40px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 20px;    
+    
+            }
+        }
+    }
+}
+
+@include desktopScreens {
+
+    body {
+
+        #catalog-section {
+    
+            #catalog-boxes {
+                grid-template-columns: repeat(5,1fr);    
+                align-items: end;
+            }
+        }
+    }
+}
